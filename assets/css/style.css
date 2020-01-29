@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+.row bg-color-company-name-description {
+    background-color: #AFEEEE;
+    margin-left: 0;
+}
+
+.section {
+    background-color: #AFEEEE;
+}
+
+.company-name {
+    padding-left: 30px;
+    padding-top: 40px;
+    font-size: 4.5em;
+    background-color: #AFEEEE;
+    margin-left: 0;
+    color: #ffffff;
+}
+
+.description {
+    padding-left: 30px;
+    padding-top: 15px;
+    margin-top: 0;
+    background-color: #AFEEEE;
+    color: #ffffff;
+    font-size: 3.75em;
+}
+.col-heading {
+    background-color: #AFEEEE;
+}
+.logo {
+    background: url("../images/Berthe.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    border-width:6px;
+    border-color:#000080;
+    border-style:inset;
+ 
+}
+#map {
+    min-height: 360px;
+    margin-top: 30px;
+}
+.example {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    background: #f1f1f1;
+}
+#monet {
+    background-attachment: fixed;
+    background-image: url('../images/harbour.jpg');
+    background-position: bottom;
+    background-size: cover;
+    z-index: 3;
+    opacity: rgba(0,0,0,0.5);
+   }
+.h1 {
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+}
+.main {
+    color:#ffffff;
+    margin-top: 25px;
+    font-size:3em;
+    font-weight: bolder;
+    text-align: center;
+}
