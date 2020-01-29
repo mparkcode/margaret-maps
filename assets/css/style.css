@@ -74,3 +74,16 @@ h2 {
     font-weight: bolder;
     text-align: center;
 }
+.input-boxes {
+        width: 100%;
+    /* line-height: 50px; */
+    font-size: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+#reset-button {
+    margin-bottom: 20px;
+    margin-top: 90px;
+}
+    
+
