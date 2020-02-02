@@ -7,6 +7,7 @@
 .section {
     background-color: #AFEEEE;
 }
+
 .company-name {
     padding-left: 30px;
     padding-right: 30px;
@@ -18,91 +19,107 @@
     font-family: Cookie;
     font-weight: bolder;
     text-decoration: underline;
-    text-align:center;
+    text-align: center;
 }
+
 .description {
     padding-left: 30px;
-    padding-top:5px;
+    padding-top: 5px;
     margin-top: 0;
     background-color: #AFEEEE;
     font-size: 3.75em;
     font-family: Cookie;
     font-weight: bold;
     color: #000080;
-    text-align:center;
+    text-align: center;
 }
+
 .col-heading {
     background-color: #AFEEEE;
 }
+
 .logo {
     background: url("../images/Berthe.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 360px;
-    border-width:4px;
-    border-color:#000080;
-    border-style:inset;
- }
- #map {
+    border-width: 4px;
+    border-color: #000080;
+    border-style: inset;
+}
+
+#map {
     min-height: 360px;
     margin-top: 30px;
-    border-width:8px;
-    border-color:#d3d3d3;
+    border-width: 8px;
+    border-color: #d3d3d3;
     border-style: ridge;
     height: 500px;
 }
 .example {
-    padding: 10px;
+    padding: 5px;
     font-size: 17px;
-    border: 1px solid grey;
+    border: 3px solid #000080;
     background: #f1f1f1;
-}
-#monet {
+    width:300px;
+   margin-left: 160px;
+   margin-top: 30px;
+   }
+ #monet {
     background-attachment: fixed;
     background-image: url('../images/harbour.jpg');
     background-position: bottom;
     background-size: cover;
     z-index: 3;
-    opacity: rgba(0,0,0,0.5);
+    opacity: rgba(0, 0, 0, 0.5);
     height: 700px;
-   }
+}
+
 .h1 {
     color: #ffffff;
+    font-weight: bold;
 }
 
 h2 {
     color: #ffffff;
+    font-family: Martel;
+    text-align: center;
+    margin-left: 10px;
 }
+
 .main {
-    color:#ffffff;
+    color: #ffffff;
     margin-top: 55px;
-    font-size:3em;
+    font-size: 3em;
     font-weight: bolder;
     text-align: center;
     font-family: Martel;
     text-decoration: underline;
     text-shadow: #d3d3d3;
 }
-.cities{
+
+.cities {
     font-family: Martel;
     margin-top: 55px;
     font-size: 3em;
     font-weight: bold;
-    text-align:center;
+    text-align: justify;
     margin-left: 10px;
     color: #ffffff;
-    }
+    margin-left: 10px;
+    word-spacing: normal;
+}
+
 .input-boxes {
-        width: 100%;
+    width: 100%;
     /* line-height: 50px; */
     font-size: 15px;
     margin-bottom: 25px;
     border-radius: 5px;
 }
+
 #reset-button {
     margin-bottom: 20px;
     margin-top: 90px;
 }
-    
-
