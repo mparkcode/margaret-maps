@@ -61,10 +61,13 @@
     padding: 5px;
     font-size: 17px;
     border: 3px solid #000080;
-    background: #f1f1f1;
-    width:300px;
+    background: #afeeee;
+    width:350px;
    margin-left: 160px;
    margin-top: 30px;
+   }
+   .example :hover {
+       background-color: pink;
    }
  #monet {
     background-attachment: fixed;
@@ -110,16 +113,75 @@ h2 {
     margin-left: 10px;
     word-spacing: normal;
 }
-
-.input-boxes {
-    width: 100%;
-    /* line-height: 50px; */
-    font-size: 15px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-}
-
 #reset-button {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 90px;
+    margin-left: 270px;
+    width:100px;
 }
+.us{
+    font-family: Cookie;
+    font-size: 3.5em;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: underline;
+    }
+    h3{
+        color: #ffffff;
+        text-align: center;
+        font-size: 2em;
+        font-family: Martel;
+        font-weight: bolder;
+        margin-top: 10px;
+    }
+.contact {
+     background-image: url("../images/boat.jpg");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 6;
+    height: 300px;
+}
+#form{
+    width:400px;
+}
+.form-check-label {
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    font-family: Martel;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-left: 270px;
+    color: #ffffff;
+}
+.footer {
+   background-color: #ccccff;
+   height:115px;
+   }
+.icon-row {
+ text-align: center;
+ letter-spacing: 75px;
+ margin-top: 100px;
+ font-size: 2em;
+ font-weight: bolder;
+ }
+.icon-row :hover {
+    color: #000080;
+}
+.copy{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    letter-spacing: normal;
+    font-size: 0.5em;
+    font-style:Martel; 
+}
+.fa-fa-copyright {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+    
+
