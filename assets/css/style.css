@@ -57,6 +57,26 @@
     border-style: ridge;
     height: 500px;
 }
+input[type=text] {
+    width:200px;
+    height:60px;
+    margin-left: 200px;
+    margin-top: 20px;
+    background-color: #fffbf8;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #000080;
+ 
+   
+    padding:5px;
+    font-family: Martel;
+    font-size:2em;
+}
+input[type=text]:focus {
+  width:250px;  
+}
+    
+
 .example {
     padding: 5px;
     font-size: 17px;
@@ -84,11 +104,13 @@
     font-weight: bold;
 }
 
-h2 {
+.preferred {
     color: #ffffff;
-    font-family: Martel;
+    font-family: Cookie;
     text-align: center;
     margin-left: 10px;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .main {
