@@ -41,7 +41,7 @@ emailjs.send('gmail','Berthe',(name:"Margaret",notes:"The information that I wan
       </div>
     </section>
   </header>
-  <section class="container-fluid" id="monet">
+  <section class="container-fluid jumbotron" id="monet">
     <div class="row">
       <div class="col-md-6 bg-color-regions section-column">
         <div class="row">
@@ -55,15 +55,34 @@ emailjs.send('gmail','Berthe',(name:"Margaret",notes:"The information that I wan
         <h1 class="cities">Specialist Trips Available in the Following Destinations: Paris, Arles, Rouen, Giverny, Chartres.</h1>
         <div class="row" id="city-name">
           <h2 class="preferred">Please Search for Information on your Preferred City.</h2>
-            <input id="pac-input" class="controls" type="text" placeholder="Search..">
-            </section>
-         
-   <section class="contact">
+           
+             <div class="hotel-search">
+      
+    <h2 class="find">Find hotels in:</h2>    
+      </div>
+      <div id="locationField">
+        <input id="autocomplete" placeholder="Enter a city" type="text" />
+      </div>
+
+      <div id="controls">
+        <select id="cities">
+          <option value="all">All</option>
+          <option value="pr">Paris</option>
+          <option value="ar">Arles</option>
+          <option value="gv">Giverny</option>
+          <option value="rn">Rouen</option>
+          <option value="ch">Chartres</option>
+          
+        </select>
+      </div>
+    
+    </section>
+     <section class="contact">
     <div class="row">
       <div class="offset-3 col-md-6">
         <h1 class="us">Please contact us for further information.</h1>
         <h3>Enter your email address</h3>
-<form action id="find"="/action_page.php">
+<form action id="find"= "/action_page.php">
   E-mail: <input type="email" name="emailaddress">
   <input type="submit">.
 </form>
@@ -104,21 +123,9 @@ emailjs.send('gmail','Berthe',(name:"Margaret",notes:"The information that I wan
             }
           });
         }
-        var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var locations = [
-          { lat: 48.867142, lng: 2.320540 },
-          { lat: 48.8673, lng: 2.3238 },
-          { lat: 48856373., lng: 2.353016 },
-        ];
+       
 
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position,
-            location,
-            label: labels[i % labels.length]
-          });
-        });
-
+       
         var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
       </script>
       <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
