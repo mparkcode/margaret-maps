@@ -11,42 +11,42 @@
         zoom: 4
         },
         
-        //Resets the map and input fields.
-
-function reset() {
-
-    clearResults();
-
-    clearMarkers();
-
-    $('#category')[0].selectedIndex = 0;
-
-    $("#autocomplete").val("");
-
-    $('#results-heading').html("");
-
-    $('#hr').hide();
-
-    map.setZoom(countries.uk.zoom);
-
-    map.setCenter(countries.uk.center);
-
-    place = "";
-
-}
+        'ar':{
+        center:{lat:43.6, lng:4.62},
+        zoom:4
+        },
         
- function initMap() {
+        'gv': {
+        center:{lat:49.08, lng:1.53},
+        zoom:4
+        },
+        
+        'rn':{
+        center:{lat:49.44, lng:1.10},
+        zoom:4
+         },
+         
+         'ch':{
+        center:{lat:48.4, lng:1.48},
+        zoom:4
+         },
+         
+         };
+         
+          function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: countries['fr'].zoom,
-          center: countries['fr'].center,
+          zoom: countries['us'].zoom,
+          center: countries['us'].center,
           mapTypeControl: false,
           panControl: false,
           zoomControl: false,
           streetViewControl: false
         });
+            
+            
         
-
-        infoWindow = new google.maps.InfoWindow({
+        
+     infoWindow = new google.maps.InfoWindow({
           content: document.getElementById('info-content')
         });
         
@@ -147,10 +147,7 @@ function reset() {
 
 }
 
-
-      
-
-        places.nearbySearch(search, function(results, status) {
+     places.nearbySearch(search, function(results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -224,11 +221,7 @@ function addResult(result, i) {
 
     var markerIcon = MARKER_PATH + markerLetter + '.png';
 
-
-
-
-
-    // Creates striped effect in results table
+     // Creates striped effect in results table
 
     var tr = document.createElement('tr');
 
@@ -238,25 +231,14 @@ function addResult(result, i) {
 
         google.maps.event.trigger(markers[i], 'click');
 
-
-
-
-
-        // Scrolls to the map section when you click on a search result
+    // Scrolls to the map section when you click on a search result
 
         $([document.documentElement, document.body]).animate({
 
             scrollTop: $("#map").offset().top
 
         }, 500);
-
-
-
-    };
-
-
-
-
+     };
 
     var iconTd = document.createElement('td');
 
@@ -283,9 +265,6 @@ function addResult(result, i) {
     results.appendChild(tr);
 
 }
-
-
-
 function clearResults() {
 
     var results = document.getElementById('results');
@@ -295,12 +274,7 @@ function clearResults() {
         results.removeChild(results.childNodes[0]);
 
     }
-
 }
-
-
-
-
 
 // Get the place details for each search result. Show the information in an info
 
@@ -328,10 +302,6 @@ function showInfoWindow() {
 
 }
 
-
-
-
-
 // Load the place information into the HTML elements used by the info window.
 
 function buildIWContent(place) {
@@ -345,8 +315,6 @@ function buildIWContent(place) {
         '">' + place.name + '</a></b>';
 
     document.getElementById('iw-address').textContent = place.vicinity;
-
-
 
     if (place.formatted_phone_number) {
 
@@ -363,10 +331,6 @@ function buildIWContent(place) {
         document.getElementById('iw-phone-row').style.display = 'none';
 
     }
-
-
-
-
 
     // Assign a five-star rating to the hotel, using a black star ('&#10029;')
 
@@ -436,5 +400,26 @@ function buildIWContent(place) {
         document.getElementById('iw-website-row').style.display = 'none';
 
     }
+
+}
+function reset() {
+
+    clearResults();
+
+    clearMarkers();
+
+    $('#category')[0].selectedIndex = 0;
+
+    $("#autocomplete").val("");
+
+    $('#results-heading').html("");
+
+    $('#hr').hide();
+
+    map.setZoom(countries.uk.zoom);
+
+    map.setCenter(countries.uk.center);
+
+    place = "";
 
 }
