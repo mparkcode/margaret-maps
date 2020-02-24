@@ -170,7 +170,7 @@
 
     });
 
-}
+
 
 function clearMarkers() {
 
