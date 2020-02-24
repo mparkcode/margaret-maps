@@ -33,39 +33,26 @@
          
          };
          
-          function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: countries['us'].zoom,
-          center: countries['us'].center,
-          mapTypeControl: false,
-          panControl: false,
-          zoomControl: false,
-          streetViewControl: false
-        });
             
-            
-        
-        
-     infoWindow = new google.maps.InfoWindow({
+            infoWindow = new google.maps.InfoWindow({
           content: document.getElementById('info-content')
         });
         
-         // Create the autocomplete object and associate it with the UI input control.
-        // Restrict the search to the default country, and to place type "cities".
+         
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
               types: ['(cities)'],
-              componentRestrictions: {country:"fr"}
+           componentRestrictions: countryRestrict
             });
         places = new google.maps.places.PlacesService(map);
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
-        // Add a DOM event listener to react when the user selects a country.
+       
         document.getElementById('country').addEventListener(
             'change', setAutocompleteCountry);
-      }
+    
       
       
          function onPlaceChanged() {
@@ -78,8 +65,7 @@
          var search = {
 
                 bounds: map.getBounds(),
-
-                types: ['lodging']
+                 types: ['lodging']
 
             };
 
@@ -91,7 +77,7 @@
         }
       }
       
-       else if ($("#bars").is(':selected')) {
+       if ($("#bars").is(':selected')) {
 
         if (place.geometry) {
 
@@ -231,8 +217,7 @@ function addResult(result, i) {
 
         google.maps.event.trigger(markers[i], 'click');
 
-    // Scrolls to the map section when you click on a search result
-
+  
         $([document.documentElement, document.body]).animate({
 
             scrollTop: $("#map").offset().top
@@ -276,9 +261,7 @@ function clearResults() {
     }
 }
 
-// Get the place details for each search result. Show the information in an info
 
-// window, anchored on the marker for the place that the user selected.
 
 function showInfoWindow() {
 
