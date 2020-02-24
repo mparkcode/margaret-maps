@@ -131,7 +131,7 @@
 
     }
 
-}
+
 
      places.nearbySearch(search, function(results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
