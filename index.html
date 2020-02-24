@@ -41,23 +41,25 @@
     </section>
   </header>
   <section class="container-fluid jumbotron" id="monet">
-    <div class="row"></div>
-      <div class="col-md-6 bg-color-regions section-column">
+  
+      <div class="col-md-6 bg-color-regions section-column"></div>
         <div class="row">
           <div class="col-12">
             <h2 class="main">Art Historical Cities in France</h2>
           </div>
         </div>
-        <div id="map"></div>
+        <div id="map">
       </div>
-      <div class="col-md-6 section-column"></div>
+      </section>
+      <section>
+      <div class="col-md-12 section-column" id="hi">
         <h1 class="cities">Specialist Trips Available in the Following Destinations: Paris, Arles, Rouen, Giverny, Chartres.</h1>
-        <div class="row" id="city-name"></div>
+        <div class="row" id="city-name">
           <h2 class="preferred">Please Search for your Preferred City.</h2>
           <div id="locationField">
              <input id="autocomplete" placeholder="Enter a city" type="text" />
-           
-         
+           </div>
+           </div>
           <div id="controls">
             <select id="cities">
           <option value="all">All</option>
@@ -79,10 +81,10 @@
              </select>
             </div>
           </div>
-          <h6><button id="reset-button" type="button" class="btn btn-primary" onclick="reset()"><strong>Reset</strong>   <i class="fas fa-redo-alt"></i></button></h6>
+          <h6><button id="reset-button" type="button" class="btn btn-primary" onclick="reset()"><strong>Reset</strong> <i class="fas fa-redo-alt"></i></button></h6>
         </div>
-        </section>
-        <section>
+         </section>
+        <section id="res">
           <h3>Results of search</h3>
         <div class="results">
           <table>
