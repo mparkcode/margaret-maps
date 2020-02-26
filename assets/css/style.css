@@ -98,6 +98,9 @@ input[type=text]:focus {
     opacity: rgba(0, 0, 0, 0.5);
     height: 700px;
 }
+.jumbotron {
+    color: rgba(0,0,0,0.3);
+}
 
 .h1 {
     color: #ffffff;
@@ -135,11 +138,12 @@ input[type=text]:focus {
     margin-left: 10px;
     word-spacing: normal;
 }
-#reset-button {
-    margin-bottom: 40px;
-    margin-top: 90px;
-    margin-left: 270px;
-    width:100px;
+
+h2 {
+    font-family: Martel;
+    font-size: 3em;
+    margin-left: 10px;
+    color:#ffffff;
 }
 .us{
     font-family: Cookie;
@@ -165,7 +169,7 @@ input[type=text]:focus {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 6;
-    height: 300px;
+    height: 450px;
 }
 #form{
     width:400px;
@@ -179,6 +183,21 @@ input[type=text]:focus {
     margin-top: 10px;
     margin-left: 270px;
     color: #ffffff;
+}
+#exampleInputEmail1 {
+    width:360px;
+    font-family: Martel;
+    color: #ffffff;
+    margin-left: 200px;
+}
+.btn btn-primary {
+    width:360px;
+}
+#fo{
+    margin-left: 40%;
+    margin-top: 60px;
+    width:150px;
+    border-radius: 10px;
 }
 .footer {
    background-color: #ccccff;
@@ -194,16 +213,31 @@ input[type=text]:focus {
 .icon-row :hover {
     color: #000080;
 }
-.copy{
+.fa fa-copyright{
+
     margin-bottom: 10px;
     margin-left: 10px;
-    letter-spacing: normal;
+    letter-spacing: 0.5px;
     font-size: 0.5em;
     font-style:Martel; 
 }
-.fa-fa-copyright {
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-    
 
+.slide {
+    background-color: #3195B7;
+    height: 450px;
+    width:700px;
+}
+.offset-3 col-md-6 jumbotron {
+    color:rgba(0,0,0,0.2);
+   border-radius:150px;
+   margin-top: 200px;
+   margin-bottom: 20px;
+}
+#hi {
+    background-color: pink;
+    height:500px;
+    margin-top: 0px;
+}
+#res{
+    background-color: green;
+}
