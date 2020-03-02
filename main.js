@@ -47,21 +47,20 @@
             });
         places = new google.maps.places.PlacesService(map);
 
-        autocomplete.addListener('place_changed', onPlaceChanged);
-
+       const citySelect=document.querySelector("#cities")
+       citySelect.addEventListener('change',function(event){
+           onPlaceChanged(event.target.value);
+       })
        
-        document.getElementById('country').addEventListener(
-            'change', setAutocompleteCountry);
-    
+       function onPlaceChanged(city){
+           const cityLatLng=countries[city].center;
+           console.log(cityLatLng)
+           var LatLng=newgoogle.maps.LatLng(cityLatLng.lat,cityLatLng.Ing);
+           map.panTo(LatLng);
+       }
       
       
-         function onPlaceChanged() {
-        var place = autocomplete.getPlace();
-         if ($("#accommodation").is(':selected')) {
-        if (place.geometry) {
-          map.panTo(place.geometry.location);
-          map.setZoom(15);
-          
+        
          var search = {
 
                 bounds: map.getBounds(),
@@ -71,8 +70,8 @@
 
             doNearbySearch(search);
 
-        }
-        } else {
+        
+         else {
           document.getElementById('autocomplete').placeholder = 'Enter a city';
         }
       }
