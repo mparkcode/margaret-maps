@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="assets/main.js" type="text/css" />
+  
   <script src="https://code.jquery.com/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+  <script src=(XHR)POST - "https://api.emailjs.com/api/v1.0/email/send"/>
   </script>
   <script>
     (function() {
@@ -43,31 +45,78 @@
    <div class="col-md-6 bg-color-regions section-column"></div>
         <div class="row">
           <div class="col-12">
-            <h2 class="main">Art Historical Cities in France</h2>
+            <p class="des">We offer arts and culture tours to the world's most fascinating destinations led by experts in their fields to bring colour and life to your visit. Fascinating itineraries and private views, not usually available to the public, are carefully selected. All you have to do is choose where you want to go. Will it be Pompeii and Herculaneum, the Persian palaces and gardens of Iran, the mosaics of Ravenna, St Petersburg, or, perhaps, the Golden Road to Samarkand? </p>
           </div>
         </div>
         <div id="map">
       </div>
       </section>
-      <section>
-      <div class="col-md-12 section-column" id="hi">
-        <h1 class="cities">Specialist Trips Available in the Following Destinations: Paris, Arles, Rouen, Giverny, Chartres.</h1>
-        <div class="row" id="city-name">
-          <h2 class="preferred">Please Search for your Preferred City.</h2>
-          <div id="locationField">
-             <input id="autocomplete" placeholder="Enter a city" type="text" />
-           </div>
-           </div>
-          <div id="controls">
-            <select id="cities">
+     
+         <section>
+       <div class="hotel-search">
+      <div id="findhotels">
+        Find hotels in:
+      </div>
+
+      <div id="locationField">
+        <input id="autocomplete" placeholder="Enter a city" type="text" />
+      </div>
+
+      <div id="controls">
+        <select id="country">
           <option value="all">All</option>
-          <option value="pr">Paris</option>
-          <option value="ar">Arles</option>
-          <option value="gv">Giverny</option>
-          <option value="rn">Rouen</option>
-          <option value="ch">Chartres</option>
-           </select>
-          </div>
+          <option value="au">Australia</option>
+          <option value="br">Brazil</option>
+          <option value="ca">Canada</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="mx">Mexico</option>
+          <option value="nz">New Zealand</option>
+          <option value="it">Italy</option>
+          <option value="za">South Africa</option>
+          <option value="es">Spain</option>
+          <option value="pt">Portugal</option>
+          <option value="us" selected>U.S.A.</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="listing">
+      <table id="resultsTable">
+         <tbody id="results"></tbody>
+      </table>
+    </div>
+
+    <div style="display: none">
+      <div id="info-content">
+        <table>
+          <tr id="iw-url-row" class="iw_table_row">
+            <td id="iw-icon" class="iw_table_icon"></td>
+            <td id="iw-url"></td>
+          </tr>
+          <tr id="iw-address-row" class="iw_table_row">
+            <td class="iw_attribute_name">Address:</td>
+            <td id="iw-address"></td>
+          </tr>
+          <tr id="iw-phone-row" class="iw_table_row">
+            <td class="iw_attribute_name">Telephone:</td>
+            <td id="iw-phone"></td>
+          </tr>
+          <tr id="iw-rating-row" class="iw_table_row">
+            <td class="iw_attribute_name">Rating:</td>
+            <td id="iw-rating"></td>
+          </tr>
+          <tr id="iw-website-row" class="iw_table_row">
+            <td class="iw_attribute_name">Website:</td>
+            <td id="iw-website"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</section>
           <div class="info">
             <p class="lead" id="looking-for"><small>What are you looking for?</small></p>
             <div id="choices">
@@ -186,7 +235,7 @@
     var map;
 
     function initMap() {
-      var map = new google.maps.Map(document.getElementById("map"), {
+      map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
         center: {
           lat: 48.8566,
