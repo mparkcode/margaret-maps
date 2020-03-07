@@ -21,11 +21,13 @@
     text-decoration: underline;
     text-align: center;
 }
+.main {
+    margin-top: 0px;
+}
 
 .description {
     padding-left: 30px;
     padding-top: 5px;
-    margin-top: 0;
     background-color: #AFEEEE;
     font-size: 3.75em;
     font-family: Cookie;
@@ -47,6 +49,13 @@
     border-width: 4px;
     border-color: #000080;
     border-style: inset;
+}
+.des{
+    text-align :center;
+    font-family:Cookie;
+    font-size:2.5em;
+    padding-top:15px;
+    color:#ffffff;
 }
 
 #map {
@@ -91,13 +100,13 @@ input[type=text]:focus {
    }
  #monet {
     background-attachment: fixed;
-    background-image: url('../images/harbour.jpg');
+    background-image: url('../images/Giverny5.jpg');
     background-position: bottom;
     background-size: cover;
     z-index: 3;
     opacity: rgba(0, 0, 0, 0.5);
-    height: 700px;
-}
+    height:350px;
+   }
 .jumbotron {
     color: rgba(0,0,0,0.3);
 }
@@ -105,28 +114,55 @@ input[type=text]:focus {
 .h1 {
     color: #ffffff;
     font-weight: bold;
+    margin-top: 0px;
 }
 
 .preferred {
     color: #ffffff;
     font-family: Cookie;
     text-align: center;
-    margin-left: 10px;
+    margin-left:35%;
     font-size: 3em;
     font-weight: bold;
+} 
+#looking-for {
+    color: #ffffff;
+    font-size:3.5em;
+    font-family: Cookie;
+    margin-left: 35%;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#choices{
+    margin-left: 35%;
+    width:160px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+    border-radius: 10px;
+ }
+#cities{
+     margin-left: 35%;
+    width:160px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+    border-radius: 10px;
+    height:20px;
+    
+    
 }
 
 .main {
     color: #ffffff;
-    margin-top: 55px;
-    font-size: 3em;
+    margin-top: 35px;
+    font-size: 4em;
     font-weight: bolder;
     text-align: center;
     font-family: Martel;
     text-decoration: underline;
     text-shadow: #d3d3d3;
 }
-
 .cities {
     font-family: Martel;
     margin-top: 55px;
@@ -145,6 +181,7 @@ h2 {
     margin-left: 10px;
     color:#ffffff;
 }
+
 .us{
     font-family: Cookie;
     font-size: 3.5em;
@@ -236,7 +273,7 @@ h2 {
 #hi {
     background-color: pink;
     height:500px;
-    margin-top: 0px;
+    margin-top:0px;
 }
 #res{
     background-color: green;
