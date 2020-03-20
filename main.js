@@ -93,6 +93,7 @@
       // When the user selects a city, get the place details for the city and
       // zoom the map in on the city.
       function onPlaceChanged() {
+          
         var place = autocomplete.getPlace();
         if (place.geometry) {
           map.panTo(place.geometry.location);
@@ -105,9 +106,12 @@
 
       // Search for hotels in the selected city, within the viewport of the map.
       function search() {
+          if(autocomplete.getPlace()){
+          var type = document.getElementById("types");
+
         var search = {
           bounds: map.getBounds(),
-          types: ['lodging']
+          types: [type.options[type.selectedIndex].value]
         };
 
         places.nearbySearch(search, function(results, status) {
@@ -134,6 +138,7 @@
             }
           }
         });
+        }
       }
 
       function clearMarkers() {

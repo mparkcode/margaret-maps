@@ -54,7 +54,12 @@
          <section>
        <div class="hotel-search">
       <div id="findhotels">
-        Find hotels in:
+        Find
+        <select id="types" onchange="search();">
+            <option value="lodging">Hotels</option>
+            <option value="cafe" selected="selected">Cafes</option>
+            <option value="tourist_attraction">Tourist attraction</option>
+        </select> in:
       </div>
 
       <div id="locationField">
